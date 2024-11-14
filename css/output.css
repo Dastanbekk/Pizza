@@ -882,6 +882,10 @@ video {
   width: 100%;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
 .w-\[90\%\] {
   width: 90%;
 }
@@ -2761,6 +2765,84 @@ video {
   background: #4f46e5;
 }
 
+/* HTML: <div class="loader"></div> */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  aspect-ratio: 1;
+  color: #f03355;
+  background: conic-gradient(currentColor 0 270deg,#0000 0);
+  border-radius: 50%;
+  animation: l14-0 30s infinite linear;
+}
+
+.spinner::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 50%;
+  border-top-left-radius: 100px;
+  background: currentColor;
+  animation: l14 10s infinite alternate;
+}
+
+@keyframes l14-0 {
+  0%,24.99%  {
+    transform: rotate(0deg)
+  }
+
+  25%,49.99% {
+    transform: rotate(90deg)
+  }
+
+  50%,74.99% {
+    transform: rotate(180deg)
+  }
+
+  75%,100%   {
+    transform: rotate(270deg)
+  }
+}
+
+@keyframes l14 {
+  100%  {
+    transform: translate(-10px,-10px)
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+
+/* .loader {
+    width: 40px;
+    aspect-ratio: 1;
+    color: #f03355;
+    background: conic-gradient(currentColor 0 270deg,#0000 0);
+    border-radius: 50%;
+    animation: l14-0 4s infinite linear;
+  }
+  .loader::before {
+    content: "";
+    display: block;
+    height: 50%;
+    width: 50%;
+    border-top-left-radius: 100px;
+    background: currentColor;
+    animation: l14 0.5s infinite alternate;
+  } */
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -2877,10 +2959,19 @@ video {
     display: none;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:border-r-2 {
     border-right-width: 2px;
     --tw-border-opacity: 1;
     border-right-color: rgb(164 172 173 / var(--tw-border-opacity));
+  }
+
+  .md\:bg-\[\#fefefe\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 254 254 / var(--tw-bg-opacity));
   }
 
   .md\:pr-\[60px\] {

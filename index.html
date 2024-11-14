@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title>
+    <link rel="icon" href="./assets/img/logo2.png" type="image/png">
+    <title>Romsem</title>
     <link rel="stylesheet" href="../css/output.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
 </head>
 <body>
-
+    <div id="preloader">
+        <div class="spinner"></div>
+      </div>
     <main class="grid grid-cols-1   font-inter max-w-[1518px] w-[100%] xl:grid-cols-[250px_minmax(60%,_1fr)_300px]">
         
         <!-- Header -->
@@ -32,15 +35,14 @@
             </div>
         </header>
 
-
         <!-- Section -->
         
 
         <section class="bg-[#F2F2F2]">
 
-            <div class=" py-[10px] flex  justify-between items-center flex-wrap">
+            <div class=" py-[10px] bg-white  flex  justify-around items-center flex-wrap md:bg-[#fefefe] md:justify-between">
                 <div class="flex">
-                    <div><img src="../assets/img/logo2.png" alt=""></div>
+                    <div class="md:hidden"><img class="w-[100px]" src="../assets/img/logo2.png" alt=""></div>
                     <div class="flex flex-col px-[20px]  md:border-r-2">
                         <h3 class="text-center">Наш телефон</h3>
                         <a href="tel:+996 705 188 955" class="text-1 text-[14px] text-center">+996 705 188 955</a>
@@ -392,6 +394,12 @@
                }
              }
             });
+        </script>
+        <script>
+            window.addEventListener('load', function () {
+                var preloader = document.getElementById('preloader');
+                preloader.style.display = 'none';
+              });
         </script>
 </body>
 </html>
