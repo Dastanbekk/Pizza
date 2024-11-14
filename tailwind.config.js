@@ -1,7 +1,7 @@
 const { default: ColorName } = require("color-name");
 
 module.exports = {
-  content: ["./pages/**/*.{html,js}"],
+  content: ["./index/**/*.{html,js}"],
   theme: {
     fontFamily:{
       inter:"Inter",
