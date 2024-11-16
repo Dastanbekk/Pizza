@@ -11,9 +11,7 @@
     transition-timing-function: linear !important;
     position: relative;
     }
-.swiper-pagination-bullet {
-    background: #4f46e5;
-}
+
 
 /* HTML: <div class="loader"></div> */
 #preloader {
